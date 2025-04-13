@@ -1,0 +1,27 @@
+{
+  "name": "legendary-portfolio",
+  "version": "1.0.0",
+  "description": "Web portfolio monorepo with Astro frontend and PayloadCMS backend",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r dev",
+    "dev:astro": "pnpm --filter astro dev",
+    "dev:payload": "pnpm --filter payload dev",
+    "build:astro": "pnpm --filter astro build",
+    "build:payload": "pnpm --filter payload build",
+    "clean": "pnpm -r clean",
+    "lint": "pnpm -r lint",
+    "lint:fix": "pnpm -r lint:fix",
+    "generate:types": "pnpm --filter payload generate:types"
+  },
+  "author": "Christian Jay Anunciado",
+  "license": "MIT"
+}
